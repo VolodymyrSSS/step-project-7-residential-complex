@@ -47,3 +47,14 @@ a {
 	/*Prevents the screen-reader to skip spaces between words */
 	white-space: nowrap;
 }
+
+.none {
+	display: none !important;
+}
+
+.titles-2ndLevel {
+	font-size: 36px;
+	font-family: $font-accent;
+	color: $accent;
+	font-weight: 700;
+}
