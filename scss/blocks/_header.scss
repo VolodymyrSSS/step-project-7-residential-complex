@@ -21,6 +21,30 @@
 	align-items: center;
 }
 
+.header__nav {
+	// @media screen and (max-width: $tablet) {
+	// 	display: none;
+	// }
+
+	// usin mixin insted
+	@include mediaTablet {
+		display: none;
+	}
+}
+
+.header__nav-btn {
+	display: none;
+
+	// @media screen and (max-width: $tablet) {
+	// 	display: block;
+	// }
+
+	// usin mixin insted
+	@include mediaTablet {
+		display: block;
+	}
+}
+
 .header__title {
 	position: relative;
 	text-align: center;
