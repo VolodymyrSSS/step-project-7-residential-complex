@@ -13,12 +13,23 @@
 			#242b33 92.19%
 		),
 		url('./../img/header/header-bg.jpg');
+
+	@include mediaTablet {
+		min-height: unset;
+		gap: 50px;
+	}
 }
 
 .header__top-row {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.header__top-row > a > img {
+	@include mediaTablet {
+		width: 75%;
+	}
 }
 
 .header__nav {
@@ -60,10 +71,22 @@
 		left: 50%;
 		transform: translate(-50% 0%);
 	}
+
+	@include mediaTablet {
+		font-size: 32px;
+		padding-bottom: 100px;
+	}
 }
 
 .header__footer {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 30px;
+
+	@include mediaTablet {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 30px;
+	}
 }
