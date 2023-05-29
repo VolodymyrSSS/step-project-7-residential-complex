@@ -11,10 +11,18 @@
 		right: calc(50% + 605px);
 		transform: translate(50%, 0%);
 	}
+
+	@include mediaTablet {
+		padding: 70px 0;
+	}
 }
 
 .section-map__title {
 	margin-bottom: 80px;
+
+	@include mediaTablet {
+		margin-bottom: 40px;
+	}
 }
 
 .map {
