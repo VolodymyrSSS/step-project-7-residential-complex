@@ -10,6 +10,10 @@
 		transform: translate(-50%, 0%);
 		@include watermarks;
 	}
+
+	@include mediaTablet {
+		padding: 5px 0 60px;
+	}
 }
 
 .benefits__row {

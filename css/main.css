@@ -405,6 +405,11 @@ a:hover {
   font-size: 400px;
   font-family: "Playfair Display", serif;
 }
+@media screen and (max-width: 975px) {
+  .benefits {
+    padding: 5px 0 60px;
+  }
+}
 
 .benefits__row {
   display: flex;
@@ -767,11 +772,23 @@ a:hover {
   letter-spacing: 0.05rem;
   background-color: #2d343c;
 }
+@media screen and (max-width: 975px) {
+  .footer {
+    padding-top: 36px;
+    padding-bottom: 25px;
+  }
+}
 
 .footer__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+}
+@media screen and (max-width: 975px) {
+  .footer__grid {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 40px 30px;
+  }
 }
 
 .footer__logo {
