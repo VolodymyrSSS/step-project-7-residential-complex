@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Residential complex</title>
 		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./libs/youtubeLightbox/youtubeLightbox.css" />
 	</head>
 	<body>
 		<header class="header">
@@ -182,6 +183,7 @@
 				<div class="container">
 					<a
 						href="https://www.youtube.com/watch?v=bhJNL9JUsnY"
+						data-youtubeLightbox
 						class="video__link"
 					>
 						<img
@@ -296,8 +298,20 @@
 				</div>
 			</div>
 		</footer>
+
+		<!-- YouTube LightBox -->
+		<div id="youtubelightbox" class="youtubelightbox">
+			<div class="youtubelightbox__centeredchild">
+				<div class="youtubelightbox__videowrapper">
+					<div id="youtubelightboxPlayer"></div>
+				</div>
+			</div>
+		</div>
+
 		<script src="./libs/phoneMask/mask.js"></script>
 		<script src="./libs/phoneMask/mask_list.js"></script>
+
+		<script src="./libs/youtubeLightbox/youtubeLightbox.js"></script>
 
 		<script src="./js/main.js"></script>
 	</body>
