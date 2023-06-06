@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Residential complex</title>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="stylesheet" href="./libs/youtubeLightbox/youtubeLightbox.css" />
 	</head>
@@ -19,10 +20,9 @@
 						<div class="header__nav">
 							<nav class="nav">
 								<ul class="nav__list">
-									<li><a href="#!">Про комплекс</a></li>
-									<li><a href="#!">Район</a></li>
-									<li><a href="#!">Каталог квартир</a></li>
-									<li><a href="#!">Іпотека</a></li>
+									<li><a href="#!">Про Майданчик</a></li>
+									<li><a href="#!">Будівельні матеріали</a></li>
+									<li><a href="#!">Перевезення</a></li>
 									<li><a href="#!">Контакти</a></li>
 								</ul>
 							</nav>
@@ -37,7 +37,8 @@
 			</div>
 			<div class="container">
 				<h1 class="header__title">
-					Жилий комплекс<br />
+					Майданчик для продажу<br />
+					будівельних матеріалів<br />
 					в районі Івано-Франківська
 					<a href="#benefits">
 						<img
@@ -50,7 +51,9 @@
 			</div>
 			<div class="header__footer">
 				<div class="text-right">
-					<a href="#section-map" class="info info--map">вул. Набережна 10-15</a>
+					<a href="#section-map" class="info info--map"
+						>вул. Набережна ім. Василя Стефаника 40-44</a
+					>
 				</div>
 				<a href="tel:+380661234567" class="info info--tel">+38(066)123-45-67</a>
 			</div>
@@ -307,6 +310,64 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises.
+      See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+		<script
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+			defer
+		></script>
+
+		<!-- Dynamic Library Import - bootstrap loader.
+		The bootstrap loader prepares the Maps JavaScript API for loading
+		(no libraries are loaded until importLibrary() is called).-->
+		<!-- <script>
+			((g) => {
+				var h,
+					a,
+					k,
+					p = 'The Google Maps JavaScript API',
+					c = 'google',
+					l = 'importLibrary',
+					q = '__ib__',
+					m = document,
+					b = window;
+				b = b[c] || (b[c] = {});
+				var d = b.maps || (b.maps = {}),
+					r = new Set(),
+					e = new URLSearchParams(),
+					u = () =>
+						h ||
+						(h = new Promise(async (f, n) => {
+							await (a = m.createElement('script'));
+							e.set('libraries', [...r] + '');
+							for (k in g)
+								e.set(
+									k.replace(/[A-Z]/g, (t) => '_' + t[0].toLowerCase()),
+									g[k]
+								);
+							e.set('callback', c + '.maps.' + q);
+							a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+							d[q] = f;
+							a.onerror = () => (h = n(Error(p + ' could not load.')));
+							a.nonce = m.querySelector('script[nonce]')?.nonce || '';
+							m.head.append(a);
+						}));
+				d[l]
+					? console.warn(p + ' only loads once. Ignoring:', g)
+					: (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+			})({
+				key: 'AIzaSyApsuTeMcsXHEVibNn2_E1aBqo_Q3e3wQs',
+				v: 'weekly',
+				// Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+				// Add other bootstrap parameters as needed, using camel case.
+			});
+		</script>-->
 
 		<script src="./libs/phoneMask/mask.js"></script>
 		<script src="./libs/phoneMask/mask_list.js"></script>
